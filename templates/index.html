@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="ResearchMate AI - Your intelligent AI research assistant"
+    >
+
+    <title>ResearchMate AI — AI Research Assistant</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="/" class="brand">
+                <div class="brand-icon">
+                    <span>R</span>
+                </div>
+
+                <div>
+                    <div class="brand-name">
+                        ResearchMate
+                    </div>
+
+                    <div class="brand-ai">
+                        AI Research Assistant
+                    </div>
+                </div>
+            </a>
+
+            <div class="nav-status">
+                <span class="status-dot"></span>
+                AI Agent Online
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Main -->
+    <main class="main-container">
+
+        <!-- Hero -->
+        <section class="hero">
+
+            <div class="hero-badge">
+                <span class="sparkle">✦</span>
+                Multi-Agent Research Intelligence
+            </div>
+
+            <h1>
+                Research smarter.
+                <span>Discover faster.</span>
+            </h1>
+
+            <p class="hero-description">
+                Turn a research topic into a structured literature review.
+                ResearchMate searches academic sources, analyzes papers,
+                compares methodologies, identifies research gaps, and
+                generates citations.
+            </p>
+
+        </section>
+
+
+        <!-- Research Card -->
+        <section class="research-card">
+
+            <div class="card-header">
+
+                <div class="card-title-wrapper">
+
+                    <div class="title-icon">
+                        🔬
+                    </div>
+
+                    <div>
+                        <h2>
+                            Start your research
+                        </h2>
+
+                        <p>
+                            Enter a topic, research question, or area of interest.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="secure-badge">
+                    <span>●</span>
+                    AI Powered
+                </div>
+
+            </div>
+
+
+            <!-- Input -->
+            <div class="input-wrapper">
+
+                <label for="topic">
+                    Research topic
+                </label>
+
+                <textarea
+                    id="topic"
+                    maxlength="1000"
+                    placeholder="Example: Retrieval-Augmented Generation for question answering..."
+                ></textarea>
+
+                <div class="input-footer">
+
+                    <span class="input-hint">
+                        Be specific for better research results
+                    </span>
+
+                    <span id="charCount">
+                        0 / 1000
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Example Topics -->
+            <div class="examples">
+
+                <span class="examples-label">
+                    Try an example
+                </span>
+
+                <button
+                    class="example-chip"
+                    data-topic="Retrieval-Augmented Generation for question answering"
+                >
+                    RAG for QA
+                </button>
+
+                <button
+                    class="example-chip"
+                    data-topic="Large Language Model hallucination detection"
+                >
+                    LLM Hallucination
+                </button>
+
+                <button
+                    class="example-chip"
+                    data-topic="Explainable AI for healthcare prediction"
+                >
+                    Explainable AI
+                </button>
+
+            </div>
+
+
+            <!-- Action -->
+            <button
+                id="submitBtn"
+                class="research-button"
+                onclick="runResearch()"
+            >
+
+                <span id="buttonIcon">
+                    ✦
+                </span>
+
+                <span id="buttonText">
+                    Run Research Agent
+                </span>
+
+                <span class="button-arrow">
+                    →
+                </span>
+
+            </button>
+
+        </section>
+
+
+        <!-- Agent Process -->
+        <section class="agent-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">
+                        HOW IT WORKS
+                    </span>
+
+                    <h2>
+                        Your research, powered by multiple AI agents
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="agent-grid">
+
+                <div class="agent-card">
+
+                    <div class="agent-number">
+                        01
+                    </div>
+
+                    <div class="agent-icon">
+                        🔎
+                    </div>
+
+                    <h3>
+                        Search
+                    </h3>
+
+                    <p>
+                        Finds relevant academic papers and research sources.
+                    </p>
+
+                </div>
+
+
+                <div class="agent-card">
+
+                    <div class="agent-number">
+                        02
+                    </div>
+
+                    <div class="agent-icon">
+                        📄
+                    </div>
+
+                    <h3>
+                        Analyze
+                    </h3>
+
+                    <p>
+                        Extracts important findings, methods, datasets and results.
+                    </p>
+
+                </div>
+
+
+                <div class="agent-card">
+
+                    <div class="agent-number">
+                        03
+                    </div>
+
+                    <div class="agent-icon">
+                        ⚖️
+                    </div>
+
+                    <h3>
+                        Compare
+                    </h3>
+
+                    <p>
+                        Compares methodologies, experiments and reported results.
+                    </p>
+
+                </div>
+
+
+                <div class="agent-card">
+
+                    <div class="agent-number">
+                        04
+                    </div>
+
+                    <div class="agent-icon">
+                        💡
+                    </div>
+
+                    <h3>
+                        Discover
+                    </h3>
+
+                    <p>
+                        Identifies research gaps and generates useful citations.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Status -->
+        <section
+            id="researchStatus"
+            class="research-status hidden"
+        >
+
+            <div class="status-header">
+
+                <div class="loading-spinner"></div>
+
+                <div>
+                    <h3>
+                        ResearchMate is working
+                    </h3>
+
+                    <p id="status">
+                        Initializing research agents...
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="progress-track">
+                <div
+                    id="progressBar"
+                    class="progress-bar"
+                ></div>
+            </div>
+
+            <div class="agent-progress">
+
+                <span id="progressSearch">
+                    ○ Searching
+                </span>
+
+                <span id="progressAnalyze">
+                    ○ Analyzing
+                </span>
+
+                <span id="progressCompare">
+                    ○ Comparing
+                </span>
+
+                <span id="progressGap">
+                    ○ Finding gaps
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Result -->
+        <section
+            id="resultSection"
+            class="result-section hidden"
+        >
+
+            <div class="result-header">
+
+                <div>
+
+                    <span class="section-label">
+                        RESEARCH REPORT
+                    </span>
+
+                    <h2>
+                        Research findings
+                    </h2>
+
+                </div>
+
+                <button
+                    class="copy-button"
+                    onclick="copyResult()"
+                >
+                    ⧉ Copy Report
+                </button>
+
+            </div>
+
+
+            <div class="result-stats">
+
+                <div class="stat-card">
+
+                    <span class="stat-icon">
+                        📚
+                    </span>
+
+                    <div>
+                        <strong id="papersFound">
+                            0
+                        </strong>
+
+                        <span>
+                            Papers Found
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span class="stat-icon">
+                        🤖
+                    </span>
+
+                    <div>
+                        <strong id="llmCalls">
+                            0
+                        </strong>
+
+                        <span>
+                            AI Calls
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span class="stat-icon">
+                        💡
+                    </span>
+
+                    <div>
+                        <strong>
+                            AI
+                        </strong>
+
+                        <span>
+                            Gap Analysis
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <article
+                id="result"
+                class="result-content"
+            ></article>
+
+        </section>
+
+
+        <!-- Error -->
+        <div
+            id="errorBox"
+            class="error-box hidden"
+        >
+            <span>⚠</span>
+
+            <div>
+                <strong>
+                    Something went wrong
+                </strong>
+
+                <p id="errorMessage"></p>
+            </div>
+
+            <button onclick="hideError()">
+                ×
+            </button>
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-container">
+
+            <div>
+                <strong>
+                    ResearchMate AI
+                </strong>
+
+                <span>
+                    Intelligent literature research assistant
+                </span>
+            </div>
+
+            <span>
+                Built with LangGraph + FastAPI
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>

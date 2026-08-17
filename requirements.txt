@@ -1,0 +1,31 @@
+# --- LangGraph / LangChain core ---
+langgraph-checkpoint-sqlite==3.1.0
+langgraph==1.2.2
+langchain==1.3.2
+langchain-groq==1.1.3
+langchain-community==0.4.2
+langchain-tavily==0.2.18
+
+# --- Config / environment ---
+python-dotenv==1.2.2
+
+# --- Search / web tools ---
+tavily-python==0.7.24
+requests==2.32.5
+
+# --- Academic paper sources ---
+arxiv==2.2.0
+semanticscholar==0.10.0
+
+# --- PDF parsing (for Literature Summarizer / Methodology Comparator) ---
+pypdf==5.4.0
+pdfplumber==0.11.5
+
+# --- Citation generation ---
+crossrefapi==1.6.0
+bibtexparser==1.4.1
+
+# --- API / server ---
+fastapi==0.136.3
+uvicorn==0.48.0
+jinja2==3.1.6
